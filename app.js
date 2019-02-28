@@ -16,9 +16,6 @@ $(document).ready(function () {
     }); // WHY USE THIS .on INSTEAD OF  $('#btnSubmit').click(function(){});
 
     $('body').append('<div></div>');
-    //added new comment
-    //added one more
-
 });
 
 
