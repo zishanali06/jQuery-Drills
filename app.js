@@ -12,11 +12,16 @@ $(document).ready(function () {
     $('#btnSubmit').on('click', function () {
         alert($('input[type="text"]').val());
         $('.div').append('<h2>' + $('input[type="text"]').val() + '</h2>')
-        return false; //stops page from reloading on submit
+        $('h2').mouseover(function(){
+            $('h2').css('background-color', 'red');
+            $('h2').css('border-radius', '15px')
+        });
+        return false;
     }); // WHY USE THIS .on INSTEAD OF  $('#btnSubmit').click(function(){});
 
     $('body').append('<div class="div"></div>');
 
+    
 });
 
 
