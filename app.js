@@ -9,18 +9,21 @@ $(document).ready(function () {
             // this does same thing $('#btnSubmit').prop('disabled', true);
         }
     });
+    $('body').append('<ul></ul>');
+    let id = 0;
     $('#btnSubmit').on('click', function () {
-        alert($('input[type="text"]').val());
-        $('.div').append('<h2>' + $('input[type="text"]').val() + '</h2>')
-        $('h2').mouseover(function(){
-            $('h2').css('background-color', 'red');
-            $('h2').css('border-radius', '15px')
+        
+        $('ul').append("<li id='" + id + "'>" + $('input[type="text"]').val() + "</li>");
+        $('li').click(function(){
+            $('li').css('background-color', 'red');
+            $('li').css('border-radius', '15px')
         });
+        id++;
         return false;
     }); // WHY USE THIS .on INSTEAD OF  $('#btnSubmit').click(function(){});
 
     $('body').append('<div class="div"></div>');
-
+    
     
 });
 
