@@ -20,6 +20,9 @@ $(document).ready(function () {
             newli.css('border-radius', '15px')
         });
         id++;
+        newli.dblclick(function(){
+            newli.remove();
+        })
         return false;
     }); // WHY USE THIS .on INSTEAD OF  $('#btnSubmit').click(function(){});
 
