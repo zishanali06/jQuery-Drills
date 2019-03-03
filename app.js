@@ -11,12 +11,13 @@ $(document).ready(function () {
     });
     $('body').append('<ul></ul>');
     let id = 0;
+    let colors = ['red', 'blue', 'green', 'purple', 'yellow'];
     $('#btnSubmit').on('click', function () {
-        
-        $('ul').append("<li id='" + id + "'>" + $('input[type="text"]').val() + "</li>");
-        $('li').click(function(){
-            $('li').css('background-color', 'red');
-            $('li').css('border-radius', '15px')
+        let newli = $("<li id='" + id + "'>" + $('input[type="text"]').val() + "</li>")
+        $('ul').append(newli);
+        newli.click(function(){
+            newli.css('background-color', colors[Math.floor(Math.random() * 5)]);
+            newli.css('border-radius', '15px')
         });
         id++;
         return false;
